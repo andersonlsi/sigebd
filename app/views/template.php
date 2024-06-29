@@ -48,12 +48,15 @@
     </div>
 
     <script src="<?php echo URL_BASE?>assets/libs/jquery/jquery.min.js"></script>
+    <script src="<?php echo URL_BASE ?>assets/js/jquery.mask.js"></script>
     <script src="<?php echo URL_BASE?>assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?php echo URL_BASE?>assets/libs/metismenu/metisMenu.min.js"></script>
     <script src="<?php echo URL_BASE?>assets/libs/simplebar/simplebar.min.js"></script>
     <script src="<?php echo URL_BASE?>assets/libs/node-waves/waves.min.js"></script>
     <script src="<?php echo URL_BASE?>assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
     <script src="<?php echo URL_BASE?>assets/js/timeAlert.js"></script>
+    <script src="<?php echo URL_BASE?>assets/js/mostrarMaisBtn.js"></script>
+    <script src="<?php echo URL_BASE ?>assets/componentes/js/js_mascara.js"></script>
 
     <!-- Required datatable js -->
     <script src="<?php echo URL_BASE?>assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
