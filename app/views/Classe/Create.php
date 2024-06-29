@@ -16,17 +16,15 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-
                 <form action="<?php echo URL_BASE . "classe/salvar" ?>" method="post">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-sm-6">
                             <h6>Classe</h6>
                             <input type="hidden" name="id_classe" value="<?php echo $classe->id_classe ?? null ?>">
                             <input type="text" class="form-control " name="classe" id="classe"
                                 value="<?php echo $classe->classe ?? null ?>" required>
                         </div>
-                        <div class="col-6">
-
+                        <div class="col-sm-6">
                             <label class="form-label">Faixa Etária</label>
                             <select class="form-control select2" name="id_faixa_etaria" id="id_faixa_etaria">                                
                                 <?php foreach($faixa_etaria as $f){ 
@@ -37,7 +35,7 @@
                     </div>
                     <div><br></div>
                     <div class="row">
-                        <div class="col">
+                        <div class="col-sm">
                             <h6>Descrição</h6>
                             <input type="text" class="form-control " name="descricao" id="descricao"
                                 value="<?php echo $classe->descricao ?? null ?>">

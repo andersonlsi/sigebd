@@ -19,7 +19,7 @@
 
                 <form action="<?php echo URL_BASE . "FaixaEtaria/salvar" ?>" method="post">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-sm">
                             <h6>Faixa Etária</h6>
                             <input type="hidden" name="id_faixa_etaria"
                                 value="<?php echo $faixa_etaria->id_faixa_etaria ?? null ?>">

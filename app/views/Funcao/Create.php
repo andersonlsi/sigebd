@@ -19,7 +19,7 @@
 
                 <form action="<?php echo URL_BASE . "funcao/salvar" ?>" method="post">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-sm">
                             <h6>Função</h6>
                             <input type="hidden" name="id_funcao" value="<?php echo $funcao->id_funcao ?? null ?>">
                             <input type="text" class="form-control " name="funcao" id="funcao"

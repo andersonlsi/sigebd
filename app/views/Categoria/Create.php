@@ -19,7 +19,7 @@
 
                 <form action="<?php echo URL_BASE . "categoria/salvar" ?>" method="post">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-sm">
                             <h6>Categoria</h6>
                             <input type="hidden" name="id_categoria"
                                 value="<?php echo $categoria->id_categoria ?? null ?>">
