@@ -24,8 +24,9 @@ class ClasseController extends Controller{
     } 
 
     public function edit($id_classe){  
-        $dados["classe"]    =  Service::get("classe", "id_classe", $id_classe);      
-        $dados["view"]      = "Categoria/Create";
+        $dados["classe"]        =  Service::get("classe", "id_classe", $id_classe); 
+        $dados["faixa_etaria"]  = Service::lista("faixa_etaria");      
+        $dados["view"]          = "Classe/Create";
         $this->load("template", $dados);
     } 
 

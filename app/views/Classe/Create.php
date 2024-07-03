@@ -26,10 +26,11 @@
                         </div>
                         <div class="col-sm-6">
                             <label class="form-label">Faixa Etária</label>
-                            <select class="form-control select2" name="id_faixa_etaria" id="id_faixa_etaria">                                
-                                <?php foreach($faixa_etaria as $f){ 
-                                echo "<option value='$f->id_faixa_etaria'>$f->id_faixa_etaria - $f->faixa_etaria</option>";
-                            }?>
+                            <select class="form-control select2" name="id_faixa_etaria" id="id_faixa_etaria">
+                                <?php foreach ($faixa_etaria as $f) {
+                                            $selected = (isset($classe) && $classe->id_faixa_etaria == $f->id_faixa_etaria) ? 'selected' : '';
+                                            echo "<option value='{$f->id_faixa_etaria}' {$selected}>{$f->id_faixa_etaria} - {$f->faixa_etaria}</option>";
+                                        }?>
                             </select>
                         </div>
                     </div>

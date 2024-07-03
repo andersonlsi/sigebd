@@ -64,41 +64,26 @@
                         <div class="col-sm-3">
                             <label class="form-label">Classe</label>
                             <select class="form-control select2" name="id_classe" id="id_classe" required>
-                                <?php foreach($classe as $c){ 
-                                echo "<option value='$c->id_classe'>$c->id_classe - $c->classe</option>";
-                            }?>
+                                <?php foreach ($classe as $c) {
+                                            $selected = (isset($aluno) && $aluno->id_classe == $c->id_classe) ? 'selected' : '';
+                                            echo "<option value='{$c->id_classe}' {$selected}>{$c->id_classe} - {$c->classe}</option>";
+                                        }?>
                             </select>
                         </div>
                         <div class="col-sm-3">
                             <label class="form-label">Função</label>
                             <select class="form-control select2" name="id_funcao" id="id_funcao" required>
-                                <?php foreach($funcao as $f){ 
-                                echo "<option value='$f->id_funcao'>$f->id_funcao - $f->funcao</option>";
-                            }?>
+                                <?php foreach ($funcao as $f) {
+                                    $selected = (isset($aluno) && $aluno->id_funcao == $f->id_funcao) ? 'selected' : '';
+                                    echo "<option value='{$f->id_funcao}' {$selected}>{$f->id_funcao} - {$f->funcao}</option>";
+                                }?>
                             </select>
                         </div>
                     </div>
                     <div><br></div>
-                    <!-- Botão Mostrar mais -->
-                    <!-- <div class="text-center mb-3">
-                        <button type="button" class="btn btn-link" id="mostrarMaisBtn">Formulário completo</button>
-                    </div> -->
                     <div><br></div>
                     <!-- Campos adicionais (escondidos inicialmente) -->
                     <div id="camposAdicionais" style="display: none;">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h6>Email</h6>
-                                <input type="email" class="form-control " name="email" id="email"
-                                    value="<?php echo $aluno->email ?? null ?>">
-                            </div>
-                            <div class="col-sm-6">
-                                <h6>Celular</h6>
-                                <input type="text" class="form-control mascara-celular " name="cel" id="cel"
-                                    value="<?php echo $aluno->cel ?? null ?>">
-                            </div>
-                        </div>
-                        <div><br></div>
                         <div class="row">
                             <div class="col-sm-3">
                                 <h6>CEP</h6>
@@ -132,6 +117,19 @@
                                 <h6>Estado</h6>
                                 <input type="text" class="form-control estado" name="estado" id="estado"
                                     value="<?php echo $aluno->estado ?? null ?>">
+                            </div>
+                        </div>
+                        <div><br></div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h6>Email</h6>
+                                <input type="email" class="form-control " name="email" id="email"
+                                    value="<?php echo $aluno->email ?? null ?>">
+                            </div>
+                            <div class="col-sm-6">
+                                <h6>Celular</h6>
+                                <input type="text" class="form-control mascara-celular " name="cel" id="cel"
+                                    value="<?php echo $aluno->cel ?? null ?>">
                             </div>
                         </div>
                         <div><br></div>
