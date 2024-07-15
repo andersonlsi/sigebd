@@ -1,0 +1,166 @@
+
+
+/*tamanho-min460px*/
+@media (min-width:460px){
+	.dobraUm .bx-img .img-fluid {   position: relative;    left: 25px;    width: 330px;}
+	.dobraDois .bx-img .img-fluid { width: 330px;margin:0 auto;display:block}
+}
+
+/*tamanho-min520px*/
+@media (min-width:520px){
+	.login .caixa-lg p {  padding: 10px;  text-align: center;   margin-top: 2rem;  display: flex;   align-items: center; justify-content: space-between;}
+	.dobraUm .bx-img .img-fluid {   position: relative;    left: 0;    width: 330px; margin:0 auto;display:block}
+	.dobraUm{padding:4rem 3rem;}
+	.title{display:flex;justify-content:space-between;align-items:center}
+	
+.checklist .d-flex.alt{gap:10px;display: grid!Important;  grid-template-columns: 103px 1fr;}
+.checklist .d-flex.alt .img-fluido{width:100px;display:block}
+.checklist .d-flex.alt ul{max-height:140px;overflow-y:auto}
+
+}
+
+/*tamanho-min768px*/
+@media (min-width:768px){
+	.col-md-4.bx-img{order:2;}
+	.col-md-8.bx-text{order:1;}
+	.col-md-8.bx-text h1,
+	.col-md-8.bx-text p
+	{text-align:left}
+	.col-md-8.bx-text .btn{display:inline-block!important;padding: 10px 20px;}
+	.dobraUm h1 { font-size: 1.9rem; line-height: 1.9rem;  font-weight: 700;}
+	.dobraUm .bx-img .img-fluid {  width: initial;}
+	.dobraUm {    padding: 3rem 3rem;}
+	.dobraDois .col-md-4.bx-img{order:1;}
+	.dobraDois .col-md-8.bx-text{order:2;}
+	.login.site .copy p{justify-content: space-between;  display: flex;}
+	.login.site .copy { padding: 10px 4rem; text-align: center;}
+	.alt768.col-6{width:50%}
+	.alt768.col-4{width:33.333%}
+	.tab_alt .tab_tr {grid-template-columns: 72px 90%;}
+}
+
+/*tamanho-min720px*/
+@media (min-width:720px){
+	.login .caixa-lg p { padding: 0 5rem;}
+	.login .caixa-lg p a{ padding: 0 10px;}
+	.window.medio{width:70%}
+	.minhasenhha{padding:0 3rem}
+	.login.site .caixa-lg {  margin: 0 4rem!important;}
+	.login.site .caixa-lg .conteudo { padding: 0 3rem!important;}
+}
+
+
+/*tamanho-min820px*/
+@media (min-width:820px){	
+	.login .caixa-lg p {  padding: 0 8rem;}
+	.login.site .caixa-lg .conteudo { padding: 0 3rem!important;}
+}
+
+
+/*tamanho-min992px*/
+@media (min-width:992px){
+	.window.medio{width:50%}
+	.conteudo{padding:0 0rem!important}
+	.login{	display:grid;grid-template-columns: 50% 50%;}
+	.login .caixa-lg { padding: 4rem;}
+	.login .caixa-lg .conteudo { display:block;justify-content:center;align-items:center;}
+	.login .caixa-logo svg { width: 240px; margin: 0 auto; margin-top: 0; height: 219px;}
+	.login .caixa-logo { align-items: center; justify-content: center;  padding-bottom: 0rem;}
+	.login .caixa-logo h2 {  font-size: 1.6rem;padding-top: 3rem;}
+	.login .caixa-logo { position:relative;overflow:hidden;}
+	.login .cont{position:relative;z-index:3}
+	.login .caixa-lg {position:relative;}
+	.login .caixa-lg p { font-size:.8rem; padding: 0;   position: absolute;   bottom: 0;   left: 0;}
+	.navmob{ display:flex;background:#fff;position:inherit}
+	.navmob ul{ display:flex;}
+	.navmob ul li a{ padding:0;font-size:.8rem}
+	.navmob ul { margin-top: 8px;padding-left: 2rem;}
+	.mobmenu{display:none;}
+	.logo {  width: 130px;}
+	.dobraDois .col-md-8.bx-text h1{ text-align: center;   padding: 4rem;}
+	.login.site .caixa-lg { margin: 5rem 10rem!important;padding-top:0rem}
+	.login.site .caixa-lg h2 { padding-top: 1rem;   font-size: 2.5rem;}
+	.login.site .caixa-lg h3 {font-size: 1.6rem; line-height: 2rem; text-align: left;   font-weight: 700;}
+	.site.login{padding-bottom:2rem}
+	.site.login {  background: #FEC900 url(../img/back_amarelo.png) no-repeat center fixed;background-size: 100%; background-position-y: 10px;}
+	.leftside-menu{display:block}
+	.backoffice .logo_2 { width: 190px;}
+	.base-meio {width: auto;padding: 15px;margin-left: 221px;}
+	.alt768.col-4 {	max-width: 100%;flex: 0 0 100%;	}
+	.cx-scroll {height: auto;overflow-y: initial;	margin-right: 0;}
+	.leftside-menu {min-width: 215px;}
+	.cx-circulo {width: 37px;height: 37px;}
+	.tab_alt .tab_tr {grid-template-columns: 58px 64%;}
+	.side-nav-item.sub:before{content:"";border:solid 5px transparent;border-top:solid 5px #fff;position:absolute;right:10px;top:23px}
+	.side-nav-item.sub ul{transition:opacity .4 linear;opacity:0;visibility:hidden; position:absolute;background: #353e4f;right: -204px;width: 200px;	top: 0;	border-left: solid 4px #44b1d9;}
+	.side-nav-item.sub ul li {padding-left: 0;}
+	.side-nav-item.sub ul li a:hover{border-radius: 0;}
+	.side-nav-item.sub:hover ul{opacity:1;visibility:visible;transition:opacity .4 linear}
+
+	.altura-minima{ min-height: calc(100vh - 91px);}
+}
+
+/*tamanho-min1100px*/
+@media (min-width:1100px){
+	.login .caixa-lg p { font-size:.8rem; padding: 0;   position: absolute;   bottom: 0; right: 61px; left: 66px;}
+	.window.medio{width:40%}
+	.minhasenhha h1 {  font-size: 2rem;  padding: 22px 10px 10px 10px;}
+	.minhasenhha.pb-4 {padding-bottom: 3.5rem!important;}
+	.container, .container-lg, .container-md {max-width: 1260px!important;}
+	.logo {  width: 174px;}
+	.navmob ul li a { font-size: .95rem;letter-spacing: -.4px;}
+	.login.site .caixa-lg { margin: 3rem 15rem!important;padding-left:3rem;padding-right:3rem;}
+	.login.site .caixa-lg .conteudo {  padding: 0 0rem!important;}
+	.login.site .caixa-lg h3 {  font-size: 1.8rem;  line-height: 2.1rem;}
+	.login.site .caixa-lg h2 { padding-top: 1rem;   font-size: 2.5rem;}
+	.login.site .copy p{justify-content: space-between;  display: flex;}
+	.login.site .copy {padding: 10px 15rem;}
+	.tab_alt .tab_tr {grid-template-columns: 56px calc(100% - 56px);padding: 6px 0;	}
+	.tab_alt .tab_tr p{padding-right: 10px	}
+}
+
+/*tamanho-min1200px*/
+@media (min-width:1200px){
+	.login .caixa-logo h2 {   font-size: 1.7rem;  padding-top: 1rem;   padding-left: 6rem;  padding-right: 6rem;}
+	.login .caixa-logo svg {  width: 248px;   height: 224px;}
+	.login {   display: grid;   grid-template-columns: 46% 54%;}
+	.site.login { display: block!important;}
+	.login .caixa-lg {  display: block;  align-items: center;  justify-content: center;padding: 7rem 9rem;}
+	.login .caixa-lg p { bottom: 10px;}
+	.login .caixa-lg h2{font-size:2rem;}	
+	.navmob ul {   padding-left: 4rem;}
+	.col-md-8.bx-text {  order: 1;    padding-right: 7rem;  width: 57.333333%;}
+	.leftside-menu { min-width: 240px;}
+	.base-meio {margin-left: 245px;}
+	.tab_alt .tab_tr {grid-template-columns: 67px calc(100% - 67px);padding: 6px 0;	}
+	.alt768.col-4 {	max-width: 33.333%;	flex: 0 0 33.333%;}
+}
+
+/*tamanho-min1360px*/
+@media (min-width:1360px){
+	.login .caixa-logo h2 {   font-size: 1.7rem;  padding-top: 1rem;   padding-left: 7rem;  padding-right: 7rem;}
+	.login .caixa-logo svg {  width: 248px;   height: 224px;}
+	.login {   display: grid;   grid-template-columns: 46% 54%;}
+	.site.login { display: block!important;}
+	.cx-circulo {width: 44px;height: 44px;}
+	.tab_alt .tab_tr {grid-template-columns: 67px calc(100% - 67px);padding: 6px 0;	}
+	.tab_alt .tab_tr p{padding-right: 10px	}
+}
+
+
+/*tamanho-min1517px*/
+@media (min-width:1517px){
+	.login .caixa-logo h2 {  padding-left: 10rem;  padding-right: 10rem;}
+	.login .caixa-lg {  padding:10rem;}
+	.site.login {  display: grid!important;   position: relative;   grid-template: none;}
+	.login.site .copy p {  position: absolute; bottom: -10px; left: 25rem;  right: 25rem;}
+	.cabecalho{height:66px;}
+}
+
+/*tamanho-min1707px*/
+@media (min-width:1707px){
+	.login .caixa-logo h2 {  padding-left: 12rem;  padding-right: 12rem;}
+	.login .caixa-lg {  padding: 12rem ; }
+	.login.site .caixa-lg { margin: 3rem 30rem!important;}
+	.login.site .copy p { left: 30rem;  right: 30rem;}
+}
