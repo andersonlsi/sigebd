@@ -2,14 +2,14 @@
 namespace app\core;
 
 class Flash{
-    public static function setMsg($msg, $tipo=1){
+    public static function setMsg($msg, $tipo = 1){
         //1 - sucesso / -1 erro / 2 info
-        $classe = "sucesso";
+        $classe = "sucess";
         $icone  = "fa-check";
-        if($tipo==-1){
-            $classe = "erro";
+        if($tipo == -1){
+            $classe = "danger";
             $icone  = "fa-exclamation-triangle";
-        }else if($tipo==2){
+        }else if($tipo == 2){
             $classe="info";
             $icone  = "fa-exclamation-circle";
         }
@@ -83,4 +83,3 @@ class Flash{
         return (isset($_SESSION["form"])) ? true: false;
     }
 }
-

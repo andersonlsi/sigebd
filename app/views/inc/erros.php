@@ -9,5 +9,5 @@
         <li><?php echo $erro ?></li>
         <?php } ?>
     </ul>
-    <span id="countdown"></span>
+    <!-- <span id="countdown"></span> -->
 </div>

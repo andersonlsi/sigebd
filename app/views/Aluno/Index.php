@@ -28,7 +28,6 @@
                     style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th>Nome</th>
                             <th>Classe</th>
                             <th>Matriculado</th>
@@ -38,7 +37,6 @@
                     <tbody>
                         <?php foreach ($lista as $c) { ?>
                         <tr>
-                            <td><?php echo $c->id_aluno ?></td>
                             <td><?php echo $c->nome ?></td>
                             <td><?php echo $c->classe ?></td>
                             <td><?php echo $c->data_matricula ?></td>

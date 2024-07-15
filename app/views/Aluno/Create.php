@@ -29,7 +29,7 @@
                         <div class="col-sm-4">
                             <h6>Data de Nascimento</h6>
                             <input type="date" class="form-control " name="data_nasc" id="data_nasc"
-                                value="<?php echo $aluno->data_nasc ?? null ?>" required>
+                                value="<?php echo $aluno->data_nasc ?? null ?>">
                         </div>
                     </div>
                     <div><br></div>
@@ -46,6 +46,9 @@
                                 <option value="Divorciado(a)"
                                     <?php echo ($aluno->estado_civil ?? null) == "Divorciado(a)" ? "selected" : ""?>>
                                     Divorciado(a)</option>
+                                <option value="Víuvo(a)"
+                                    <?php echo ($aluno->estado_civil ?? null) == "Víuvo(a)" ? "selected" : ""?>>
+                                    Víuvo(a)</option>
                                 <option value="Outros"
                                     <?php echo ($aluno->estado_civil ?? null) == "Outros" ? "selected" : ""?>>
                                     Outros
@@ -65,24 +68,25 @@
                             <label class="form-label">Classe</label>
                             <select class="form-control select2" name="id_classe" id="id_classe" required>
                                 <?php foreach ($classe as $c) {
-                                            $selected = (isset($aluno) && $aluno->id_classe == $c->id_classe) ? 'selected' : '';
-                                            echo "<option value='{$c->id_classe}' {$selected}>{$c->id_classe} - {$c->classe}</option>";
-                                        }?>
+                                    $selecionado = ($aluno->id_classe ?? null) == $c->id_classe ? 'selected' : '';
+                                    echo "<option value='$c->id_classe' $selecionado >$c->id_classe - $c->classe</option>";
+
+                                }?>
                             </select>
                         </div>
                         <div class="col-sm-3">
                             <label class="form-label">Função</label>
                             <select class="form-control select2" name="id_funcao" id="id_funcao" required>
                                 <?php foreach ($funcao as $f) {
-                                    $selected = (isset($aluno) && $aluno->id_funcao == $f->id_funcao) ? 'selected' : '';
-                                    echo "<option value='{$f->id_funcao}' {$selected}>{$f->id_funcao} - {$f->funcao}</option>";
+                                    $selecionado = ($aluno->id_funcao ?? null) == $f->id_funcao ? 'selected' : '';
+                                    echo "<option value='$f->id_funcao' $selecionado >$f->id_funcao - $f->funcao</option>";
                                 }?>
                             </select>
                         </div>
                     </div>
                     <div><br></div>
                     <div><br></div>
-                    <!-- Campos adicionais (escondidos inicialmente) -->
+                    <!-- Campos adicionais (escondidos inicialmente) teste a-->
                     <div id="camposAdicionais" style="display: none;">
                         <div class="row">
                             <div class="col-sm-3">

@@ -13,7 +13,7 @@
                 <a href="<?php echo URL_BASE . "categoria/Create" ?>" class="btn btn-success" role="button"
                     aria-pressed="true">
                     <i class="ion ion-md-add-circle-outline"></i>
-                    Novo Cadastro</a>
+                    Novo</a>
             </div>
         </div>
     </div>

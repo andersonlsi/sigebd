@@ -18,7 +18,8 @@ class AlunoController extends Controller{
     public function create(){ 
         $dados["aluno"]   = Flash::getForm(); 
         $dados["classe"]  = AlunoService::classe("classe");  
-        $dados["funcao"]  = AlunoService::funcao("funcao");       
+        $dados["funcao"]  = AlunoService::funcao("funcao");    
+          
         $dados["view"]    = "Aluno/Create";
         $this->load("template", $dados);
     } 
@@ -26,7 +27,8 @@ class AlunoController extends Controller{
     public function edit($id_aluno){  
         $dados["aluno"]   =  Service::get("aluno", "id_aluno", $id_aluno); 
         $dados["classe"]  = AlunoService::classe("classe");  
-        $dados["funcao"]  = AlunoService::funcao("funcao");      
+        $dados["funcao"]  = AlunoService::funcao("funcao");   
+         
         $dados["view"]    = "Aluno/Create";
         $this->load("template", $dados);
     } 

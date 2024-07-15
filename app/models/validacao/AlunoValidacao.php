@@ -9,12 +9,12 @@ class AlunoValidacao{
         
         //setando os dados
         $validacao->setData("nome",$aluno->nome);  
-        $validacao->setData("data_nasc",$aluno->data_nasc);   
+       // $validacao->setData("data_nasc",$aluno->data_nasc);   
 
 
         //validar os dados
-        $validacao->getData("nome")->isVazio()->isMinimo(5);
-        $validacao->getData("data_nasc")->isVazio();
+        $validacao->getData("nome")->isVazio();
+       // $validacao->getData("data_nasc")->isVazio();
         
         return $validacao;
     }

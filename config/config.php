@@ -2,7 +2,7 @@
 define("ROTA_MANUAL",false);
 
 define("SERVIDOR", "localhost");
-define("BANCO", "sigebd");
+define("BANCO", "sigebd2");
 define("USUARIO", "root");
 define("SENHA", "");
 define("CHARSET","UTF8");

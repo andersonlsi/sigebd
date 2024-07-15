@@ -17,13 +17,13 @@ class FuncaoController extends Controller{
 
     public function create(){   
         $dados["funcao"] = Flash::getForm();         
-        $dados["view"]   = "Funcao/Create";
+        $dados["view"]   = "Funcao/Index";
         $this->load("template", $dados);
     } 
 
     public function edit($id_funcao){  
         $dados["funcao"] =  Service::get("funcao", "id_funcao", $id_funcao);      
-        $dados["view"]   = "Funcao/Create";
+        $dados["view"]   = "Funcao/Index";
         $this->load("template", $dados);
     } 
 

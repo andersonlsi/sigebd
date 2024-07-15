@@ -4,5 +4,5 @@
     <i class="fas fa-check"></i>
     <strong>Sucesso!</strong>
     <?php echo $msg->msg; ?>
-    <span id="countdown"></span>
+    <!-- <span id="countdown"></span> -->
 </div>
