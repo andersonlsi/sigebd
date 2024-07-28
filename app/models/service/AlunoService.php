@@ -22,9 +22,6 @@ class AlunoService{
     public static function funcao() {
         $dao = new AlunoDao();
         return $dao->funcao();
-    }  
-    
-
-    
+    }     
     
 }  

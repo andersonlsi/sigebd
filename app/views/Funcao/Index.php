@@ -1,29 +1,21 @@
-<div class="row">
-    <div class="col-sm-6">
-        <div class="page-title-box">
-            <h4>Lista de Funções</h4>
-        </div>
+<script src="<?php echo URL_BASE ?>assets/js/CadFuncao.js"></script>
+<div class="d-flex justify-content-between align-items-center">
+    <div>
+        <h4>Lista de Funções</h4>
     </div>
-    <div class="col-sm-6">
-        <div class="state-information d-none d-sm-block">
-            <div class="state-graph">
-            </div>
-            <div class="state-graph">
-                <button type="button" class="btn btn-success waves-effect waves-light" data-bs-toggle="modal"
-                    data-bs-target="#cad">
-                    <i class="ion ion-md-add-circle-outline"></i>
-                    Novo
-                </button>
-            </div>
-        </div>
+    <div>
+        <button type="button" class="btn btn-success waves-effect waves-light" onclick="abrirModalCadastro()">
+            <i class="ion ion-md-add-circle-outline"></i>
+            Novo
+        </button>
     </div>
 </div>
+<div><br></div>
 <?php $this->verMsg(); $this->verErro();?>
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-
                 <table id="datatable" class="table table-bordered dt-responsive nowrap"
                     style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                     <thead>
@@ -39,10 +31,7 @@
                             <td><?php echo $f->id_funcao ?></td>
                             <td><?php echo $f->funcao ?></td>
                             <td>
-                                <!-- <a href="<?php //echo URL_BASE . "funcao/edit/" . $f->id_funcao ?>" class=""><i
-                                        class="far fa-edit"></i></a>&nbsp;&nbsp; -->
-
-                                <a href="<?php echo URL_BASE . "funcao/edit/" . $f->id_funcao ?>" data-bs-toggle="modal" data-bs-target="#edit">
+                                <a href="javascript:;" onclick="buscarFuncao(<?php echo $f->id_funcao ?>)" class="">
                                     <i class="far fa-edit"></i>
                                 </a>
                                 &nbsp;&nbsp;
@@ -61,30 +50,22 @@
     </div>
 </div>
 
+<!-- Modal -->
 <div class="modal fade" id="cad" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">
-                    <?php           
-                        if ($funcao->id_funcao ?? null) {
-                            echo "Editar Função";
-                        } else {
-                            echo "Cadastrar Função";
-                        }
-                    ?>
-                </h5>
+                <h5 class="modal-title" id="modalTitle">Cadastrar Função</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="<?php echo URL_BASE . "funcao/salvar" ?>" method="post">
+                <form action="<?php echo URL_BASE . 'funcao/salvar' ?>" id="frmFuncao" name="frmFuncao" method="post">
                     <div class="row">
                         <div class="col-sm">
                             <h6>Função</h6>
-                            <input type="hidden" name="id_funcao" value="<?php echo $funcao->id_funcao ?? null ?>">
-                            <input type="text" class="form-control " name="funcao" id="funcao"
-                                value="<?php echo $funcao->funcao ?? null ?>" required>
+                            <input type="hidden" name="id_funcao" id="id_funcao" value="">
+                            <input type="text" class="form-control" name="funcao" id="funcao" value="" required>
                         </div>
                     </div>
             </div>

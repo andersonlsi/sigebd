@@ -11,7 +11,7 @@ class CategoriaValidacao{
         $validacao->setData("categoria",$categoria->categoria);        
 
         //validar os dados
-        $validacao->getData("categoria")->isVazio()->isMinimo(5);
+        $validacao->getData("categoria")->isVazio()->isMinimo(5)/*->isUnico(9)*/;   
         
         return $validacao;
     }

@@ -153,19 +153,19 @@
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img class="rounded-circle header-profile-user"
-                        src="<?php echo URL_BASE?>assets/images/users/logo.png" alt="Header Avatar">
+                        src="<?php echo URL_BASE?>assets/images/users/anderson.jpg" alt="Header Avatar">
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <a class="dropdown-item"
-                        href="javascript:void(0);"><?php // echo $_SESSION[SESSION_LOGIN]->nome ?></a>
-                    <a class="dropdown-item" href="<?php echo URL_BASE . "Perfil" ?>"><i
+                        href="javascript:void(0);"><?php echo $_SESSION[SESSION_LOGIN]->usuario ?></a>
+                    <a class="dropdown-item" href="<?php echo URL_BASE . "MeuPerfil" ?>"><i
                             class="mdi mdi-account-circle font-size-17 text-muted align-middle me-1"></i> Meu Perfil</a>
                     <a class="dropdown-item d-flex align-items-center" href="<?php echo URL_BASE . "Configuracao" ?>"><i
                             class="mdi mdi-cog font-size-17 text-muted align-middle me-1"></i> Configurações</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item text-danger"
-                        href="javascript: if(confirm('Deseja realmente sair?')){window.location.href='<?php // echo URL_BASE . "login/logoff" ?>'}">
-                        <i class="mdi mdi-power font-size-17 text-muted align-middle me-1 text-danger"></i> Logout</a>
+                        href="javascript: if(confirm('Deseja realmente sair?')){window.location.href='<?php echo URL_BASE . "login/logoff" ?>'}">
+                        <i class="mdi mdi-power font-size-17 text-muted align-middle me-1 text-danger"></i> Sair</a>
                 </div>
             </div>
         </div>

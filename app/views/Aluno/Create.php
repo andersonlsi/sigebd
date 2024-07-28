@@ -28,8 +28,8 @@
                         </div>
                         <div class="col-sm-4">
                             <h6>Data de Nascimento</h6>
-                            <input type="date" class="form-control " name="data_nasc" id="data_nasc"
-                                value="<?php echo $aluno->data_nasc ?? null ?>">
+                            <input type="date" class="form-control " name="dta_nascimento" id="dta_nascimento"
+                                value="<?php echo $aluno->dta_nascimento ?? null ?>">
                         </div>
                     </div>
                     <div><br></div>
@@ -86,7 +86,8 @@
                     </div>
                     <div><br></div>
                     <div><br></div>
-                    <!-- Campos adicionais (escondidos inicialmente) teste a-->
+                    <!-- Campos adicionais (escondidos inicialmente) -->
+
                     <div id="camposAdicionais" style="display: none;">
                         <div class="row">
                             <div class="col-sm-3">
@@ -97,11 +98,11 @@
                             <div class="col-sm-6">
                                 <h6>Endereço</h6>
                                 <input type="text" class="form-control rua " name="endereco" id="endereco"
-                                    value="<?php echo $aluno->endereco ?? null ?>">
+                                    value="<?php echo $aluno->endereco ?? null ?>" readonly>
                             </div>
                             <div class="col-sm-3">
                                 <h6>Número</h6>
-                                <input type="text" class="form-control " name="numero" id="numero"
+                                <input type="number" class="form-control " name="numero" id="numero"
                                     value="<?php echo $aluno->numero ?? null ?>">
                             </div>
                         </div>
@@ -110,17 +111,17 @@
                             <div class="col-sm-4">
                                 <h6>Bairro</h6>
                                 <input type="text" class="form-control bairro" name="bairro" id="bairro"
-                                    value="<?php echo $aluno->bairro ?? null ?>">
+                                    value="<?php echo $aluno->bairro ?? null ?>" readonly>
                             </div>
                             <div class="col-sm-4">
                                 <h6>Cidade</h6>
                                 <input type="text" class="form-control cidade" name="cidade" id="cidade"
-                                    value="<?php echo $aluno->cidade ?? null ?>">
+                                    value="<?php echo $aluno->cidade ?? null ?>" readonly>
                             </div>
                             <div class="col-sm-4">
                                 <h6>Estado</h6>
                                 <input type="text" class="form-control estado" name="estado" id="estado"
-                                    value="<?php echo $aluno->estado ?? null ?>">
+                                    value="<?php echo $aluno->estado ?? null ?>" readonly>
                             </div>
                         </div>
                         <div><br></div>

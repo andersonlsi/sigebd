@@ -7,7 +7,11 @@ class Service{
     public static function lista($tabela){
         $dao = new Dao();
         return $dao->lista($tabela);
-    }    
+    }       
+    public static function lista2($tabela){
+        $dao = new Dao();
+        return $dao->lista2($tabela);
+    }  
     public static  function get($tabela, $campo, $valor,$eh_lista=false){
         $dao = new Dao();
         return  $dao->get($tabela, $campo, $valor,$eh_lista);
@@ -68,7 +72,7 @@ class Service{
             if($objeto->$campo){
                 $resultado =  $dao->editar(objToArray($objeto),$campo, $tabela);                
                 if($resultado){
-                    Flash::setMsg("Registro Alterado com sucesso. ",1);
+                    Flash::setMsg("Registro Alterado com sucesso. ", 1);
                 }else{
                     Flash::setMsg("Nenhum Registro foi alterado. ", -1) ;
                 }
@@ -93,17 +97,18 @@ class Service{
         $dao = new Dao();
         Flash::limpaForm();
         Flash::limpaMsg();
-        $resultado = $dao->get($tabela, $campo, $valor,false);
+        $resultado = $dao->get($tabela, $campo, $valor, false);
         if($resultado){
-            if($resultado->senha == $senha){
+            if(password_verify($senha, $resultado->senha)){
                 $_SESSION[SESSION_LOGIN] = $resultado;
                 return true;
             }
         }
-        Flash::setMsg("Login ou senha não encontrados",-1);
+        Flash::setMsg("Login ou senha não encontrados", -1);
         unset($_SESSION[SESSION_LOGIN]);
         return false;
     }
+    
     
     public static function inserir($dados, $tabela){
         $dao = new Dao();
@@ -119,9 +124,9 @@ class Service{
         $dao = new Dao();
         $excluir = $dao->excluir($tabela, $campo, $valor);
         if($excluir){
-            Flash::setMsg("Registro Excluído com Sucesso! ");
+            Flash::setMsg("Registro Excluído com Sucesso!", 1);
         }else{
-            Flash::setMsg("Não foi possível excluir o registro.",-1);
+            Flash::setMsg("Não foi possível excluir o registro.", -1);
         }        
         return  $excluir;
     }

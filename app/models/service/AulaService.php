@@ -15,6 +15,12 @@ class AulaService{
         return $dao->lista();
     }  
 
+    public static function getPresencaFalta($id_aula) {
+        $dao = new AulaDao();
+        return $dao->getPresencaFalta($id_aula);
+    }
+    
+
     public static function existeDataAula($data) {
         $dao = new AulaDao();
         return $dao->existeDataAula($data);

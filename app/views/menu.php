@@ -13,6 +13,18 @@
                 <!-- <li class="menu-title">Páginas</li> -->
 
                 <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-account-group"></i>
+                        <span> Usuários </span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="<?php echo URL_BASE . "usuario" ?>">Usuário</a></li>
+                        <li><a href="<?php echo URL_BASE . "perfil" ?>">Perfil</a></li>
+                        <li><a href="<?php echo URL_BASE . "permissao" ?>">Permissão</a></li>
+                    </ul>
+                </li>
+
+                <li>
                     <a href="<?php echo URL_BASE . "Aluno" ?>" class="waves-effect">
                         <i class="mdi mdi-account-box"></i>
                         <span>Alunos</span>
@@ -20,7 +32,7 @@
                 </li>
                 <li>
                     <a href="<?php echo URL_BASE . "Classe" ?>" class="waves-effect">
-                        <i class="mdi mdi-account-group"></i>
+                        <i class="mdi mdi-alpha-c-circle-outline"></i>
                         <span>Classes</span>
                     </a>
                 </li>

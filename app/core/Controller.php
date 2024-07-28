@@ -1,7 +1,7 @@
 <?php
 namespace app\core;
 
-use function Composer\Autoload\includeFile;
+//use function Composer\Autoload\includeFile;
 
 class Controller{
      public function load($viewName, $viewData=array()){

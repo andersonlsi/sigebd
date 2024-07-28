@@ -4,9 +4,22 @@ use app\core\Controller;
 use app\core\Flash;
 use app\models\service\FuncaoService;
 use app\models\service\Service;
+use app\util\UtilService;
 use stdClass;
 
 class FuncaoController extends Controller{  
+
+    private $usuario;
+    
+    public function __construct()
+    {
+      $this->usuario = UtilService::getUsuario();
+         if(!$this->usuario)
+         {
+            $this->redirect(URL_BASE ."login");      
+            exit;	  
+         }    
+   }
     
     public function index(){
         $dados["lista"] = Service::lista("funcao"); 
@@ -44,10 +57,24 @@ class FuncaoController extends Controller{
          if($obj->id_funcao){
             $this->redirect(URL_BASE . "funcao/edit/" . $obj->id_funcao);
          }else{
-            $this->redirect(URL_BASE . "funcao/create");
+            $this->redirect(URL_BASE . "funcao/Index");
          }        
        }          
     } 
+
+    public function buscarFuncao($id_funcao){
+        $retorno = new stdClass;
+        try {
+            $funcao = Service::get("funcao","id_funcao", $id_funcao);
+            $retorno->tem_erro = false;
+            $retorno->dados = $funcao;
+        } catch (\Throwable $th) {
+            $retorno->tem_erro = true;
+            $retorno->msg = $th->getMessage();
+        }
+
+        echo json_encode($retorno);
+    }
     
     public function excluir($id_funcao) {
         Service::excluir("funcao", "id_funcao", $id_funcao);

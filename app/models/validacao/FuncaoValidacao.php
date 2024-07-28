@@ -11,7 +11,7 @@ class FuncaoValidacao{
         $validacao->setData("funcao",$funcao->funcao);        
 
         //validar os dados
-        $validacao->getData("funcao")->isVazio()->isMinimo(5); //->isUnico();
+        $validacao->getData("funcao")->isVazio()->isMinimo(5)/*->isUnico(9)*/;      
        
         return $validacao;
     }
