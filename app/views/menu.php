@@ -63,6 +63,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="<?php echo URL_BASE . "Relatorio/Geral" ?>">Geral</a></li>
                         <li><a href="<?php echo URL_BASE . "Relatorio/Classe" ?>">Por Classe</a></li>
+                        <li><a href="<?php echo URL_BASE . "Relatorio/Aula" ?>">Por Aula</a></li>
                     </ul>
                 </li>
 

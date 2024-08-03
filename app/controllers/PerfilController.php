@@ -19,7 +19,7 @@ class PerfilController extends Controller{
             $this->redirect(URL_BASE ."login");      
             exit;	  
          }    
-   }
+   } 
     
     public function index(){
         $dados["lista"] = Service::lista("perfil");                   

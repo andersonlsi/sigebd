@@ -47,3 +47,10 @@ function abrirModal() {
     // Abrir o modal
     $('#cad').modal('show');
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    var listItems = document.querySelectorAll(".list-item");
+    if (listItems.length >= 3) {
+        document.getElementById("scrollable-list").classList.add("apply-scroll");
+    }
+});

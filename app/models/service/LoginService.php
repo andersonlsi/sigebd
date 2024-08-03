@@ -1,5 +1,6 @@
 <?php
 namespace app\models\service;
+
 use app\core\Flash;
 use app\models\dao\Dao;
 
@@ -16,7 +17,7 @@ class LoginService{
             }    
         }        
         unset($_SESSION[SESSION_LOGIN]);
-        Flash::setMsg("Email e senha não localizados",-1);        
+        Flash::setMsg("Email e senha não localizados");        
         return false;
     }
     

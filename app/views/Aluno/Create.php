@@ -28,8 +28,8 @@
                         </div>
                         <div class="col-sm-4">
                             <h6>Data de Nascimento</h6>
-                            <input type="date" class="form-control " name="dta_nascimento" id="dta_nascimento"
-                                value="<?php echo $aluno->dta_nascimento ?? null ?>">
+                            <input type="date" class="form-control " name="data_nasc" id="data_nasc"
+                                value="<?php echo $aluno->data_nasc ?? null ?>">
                         </div>
                     </div>
                     <div><br></div>
@@ -164,11 +164,11 @@
                     <div class="row">
                         <button type="button" class="btn btn-link" id="mostrarMaisBtn">Formulário completo</button>
                         <div class="col-sm-4">
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-primary w-md waves-effect waves-light">
                                 <i class="ion ion-md-save"></i>
                                 Salvar
                             </button>
-                            <a href="<?php echo URL_BASE . "aluno" ?>" class="btn btn-success" role="button"
+                            <a href="<?php echo URL_BASE . "aluno" ?>" class="btn btn-warning" role="button"
                                 aria-pressed="true">
                                 <i class="ion ion-md-return-left"></i>
                                 Voltar

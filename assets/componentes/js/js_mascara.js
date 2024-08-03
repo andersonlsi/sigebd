@@ -18,6 +18,7 @@ $(function () {
     $(".mascara-cnpj").mask('00.000.000/0000-00', { reverse: true });
     $(".mascara-cep").mask('00000-000', { reverse: true });
     $(".mascara-dinheiro").mask('R$ 000.000.000.000.000,00', { reverse: true, placeholder: "R$ 0,00" });
+    $(".mascara-dinheiro2").mask('R$ 000.000.000.000.000.00', { reverse: true, placeholder: "R$ 0.00" });
     $(".mascara-float").mask('000.000.000.000.000,00', { reverse: true, placeholder: "0,00" });
 
     // SEARCH ZIPCODE

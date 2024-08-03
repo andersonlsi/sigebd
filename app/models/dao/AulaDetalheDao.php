@@ -12,7 +12,17 @@ class AulaDetalheDao extends Model {
     }  
    
     public function lista2($id_aula) {
-        $sql = "SELECT id_aula, total_presenca, total_falta, total_biblia, total_revista, total_oferta, total_visitante, total_matriculado, observacao 
+        $sql = "SELECT id_aula, 
+                       total_presenca, 
+                       total_falta, 
+                       total_biblia, 
+                       total_revista, 
+                       total_oferta,
+                       total_saida,
+                       total_final, 
+                       total_visitante, 
+                       total_matriculado, 
+                       observacao 
                 FROM view_aula_geral 
                 WHERE id_aula = :id_aula";
         $stmt = $this->db->prepare($sql);
@@ -28,5 +38,6 @@ class AulaDetalheDao extends Model {
         $stmt->bindValue(":id_aula", $id_aula);
         return $stmt->execute();
     }
+    
 }
 ?>

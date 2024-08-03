@@ -6,7 +6,6 @@ use app\util\UtilService;
 use stdClass;
 
 class AulaDetalheClasseController extends Controller {
-
     private $usuario;
     
     public function __construct()
@@ -17,8 +16,7 @@ class AulaDetalheClasseController extends Controller {
             $this->redirect(URL_BASE ."login");      
             exit;	  
          }    
-   }
-   
+   } 
     public function index($id_aula_detalhe) {
         $detalhe = AulaDetalheClasseService::getDetalhe($id_aula_detalhe);
         $id_aula = $detalhe->id_aula;
@@ -33,10 +31,10 @@ class AulaDetalheClasseController extends Controller {
     }
 
     public function atualizarPresenca() {
-        $id_aula = $_POST['id_aula'];
+        $id_aula   = $_POST['id_aula'];
         $id_classe = $_POST['id_classe'];
-        $id_aluno = $_POST['id_aluno'];
-        $presente = $_POST['presente'];
+        $id_aluno  = $_POST['id_aluno'];
+        $presente  = $_POST['presente'];
 
         $resultado = AulaDetalheClasseService::atualizarPresenca($id_aula, $id_classe, $id_aluno, $presente);
         echo json_encode($resultado);
@@ -59,6 +57,22 @@ class AulaDetalheClasseController extends Controller {
         AulaDetalheClasseService::salvar($obj);
         $this->redirect(URL_BASE . "aulaDetalheClasse/index/" . $obj->id_aula_detalhe);
     }
+
+    public function atualizarPresencas() {
+        $input = json_decode(file_get_contents("php://input"), true);
+        $id_aula   = $input['id_aula'];
+        $id_classe = $input['id_classe'];
+        $presencas = $input['presencas'];
+    
+        foreach ($presencas as $presenca) {
+            $id_aluno = $presenca['id_aluno'];
+            $status_presenca = $presenca['presente'];
+            AulaDetalheClasseService::atualizarPresenca($id_aula, $id_classe, $id_aluno, $status_presenca);
+        }
+    
+        echo json_encode(['status' => 'success']);
+    }
+    
 
     public function buscarAulaDetalheClasse($id_aula_detalhe) {
         $retorno = new stdClass;

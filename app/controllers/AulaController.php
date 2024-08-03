@@ -8,7 +8,6 @@ use app\util\UtilService;
 use stdClass;
 
 class AulaController extends Controller{ 
-    
     private $usuario;
     
     public function __construct()
@@ -19,7 +18,7 @@ class AulaController extends Controller{
             $this->redirect(URL_BASE ."login");      
             exit;	  
          }    
-   }
+   }  
     
     public function index(){
         $listaAulas = AulaService::lista("aula");

@@ -1,12 +1,11 @@
-<script src="<?php echo URL_BASE ?>assets/js/CadAula.js"></script>
+<link href="<?php echo URL_BASE?>assets/css/aula.css" rel="stylesheet" type="text/css" />
 <div class="d-flex justify-content-between align-items-center">
     <div>
-        <h4>Aulas</h4>
+        <h4>Lista de Aulas</h4>
     </div>
     <div>
         <button type="button" class="btn btn-success waves-effect waves-light" onclick="abrirModal()">
-            <i class="ion ion-md-add-circle-outline"></i>
-            Nova Aula
+        <i class="ion ion-md-add-circle-outline large-icon"></i>            
         </button>
     </div>
 </div>
@@ -16,40 +15,47 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-
-                <table id="datatable" class="table table-bordered dt-responsive nowrap"
-                    style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                    <thead>
-                        <tr>
-                            <th>Data</th>
-                            <th>Lição</th>
-                            <th>Resumo</th>
-                            <th>Ação</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($lista as $a) { ?>
-                        <tr>
-                            <td><?php echo databr($a->dta_aula)?></td>
-                            <td><?php echo $a->numero ?></td>
-                            <td>
-                                Matriculados: <strong><?php echo $a->total_matriculado ?></strong> |
-                                Presentes: <strong><?php echo $a->total_presenca ?></strong> |
-                                Ausentes: <strong><?php echo $a->total_falta ?></strong>
-                            </td>
-                            <td>
-                                <a href="<?php echo URL_BASE . "aulaDetalhe/index/" . $a->id_aula ?>" class=""><i
-                                        class="far fas fa-list"></i></a>
-                                &nbsp;&nbsp;
-                                <a href="javascript: if(confirm('ATENÇÃO: Essa ação não pode ser desfeita! Tem certeza que deseja excluir esse lançamento?')){
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <?php if (empty($lista)) { ?>
+                                <p class="text-center">Nenhuma aula cadastrada no momento.</p>
+                                <?php } else { ?>
+                                <div id="scrollable-list" class="scrollable-list">
+                                    <?php foreach ($lista as $a) { ?>
+                                    <div class="list-item">
+                                        <div class="item-header">
+                                            <span class="lesson">Lição: <strong><?php echo $a->numero ?></strong></span>
+                                            <span class="separator">&nbsp;&nbsp;</span>
+                                            <span class="date">Data: <strong><?php echo databr($a->dta_aula) ?></strong></span>                                           
+                                        </div>                                        
+                                        <div class="item-content">                                       
+                                            <p class="details">                                                
+                                                Matriculados: <strong><?php echo $a->total_matriculado ?></strong>
+                                                <span class="separator">&nbsp;&nbsp;</span>
+                                                Presentes: <strong><?php echo $a->total_presenca ?></strong>
+                                                <span class="separator">&nbsp;&nbsp;</span>
+                                                Ausentes: <strong><?php echo $a->total_falta ?></strong>
+                                            </p>
+                                        </div>
+                                        <div class="item-actions">
+                                            <a href="<?php echo URL_BASE . "aulaDetalhe/index/" . $a->id_aula ?>"
+                                                class="btn btn-link p-0"><i class="far fas fa-list"></i></a>
+                                            &nbsp;&nbsp;
+                                            <a href="javascript: if(confirm('ATENÇÃO: Essa ação não pode ser desfeita! Tem certeza que deseja excluir esse lançamento?')){
                                                     window.location.href='<?php echo URL_BASE . "aula/excluir/" . $a->id_aula ?>'
-                                                }">
-                                    <i class="far fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
+                                                }" class="btn btn-link p-0">
+                                                <i class="far fa-trash-alt"></i></a>
+                                        </div>
+                                    </div>
+                                    <?php } ?>
+                                </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -85,3 +91,4 @@
         </div>
     </div>
 </div>
+<script src="<?php echo URL_BASE ?>assets/js/CadAula.js"></script>

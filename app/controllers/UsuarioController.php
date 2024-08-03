@@ -9,6 +9,7 @@ use stdClass;
 
 class UsuarioController extends Controller{ 
     private $usuario;
+    
     public function __construct()
     {
       $this->usuario = UtilService::getUsuario();
@@ -43,7 +44,7 @@ class UsuarioController extends Controller{
         $obj->usuario         = $_POST["usuario"];  
         $obj->email           = $_POST["email"]; 
         $obj->senha           = password_hash($_POST["senha"], PASSWORD_DEFAULT); // Criptografa a senha
-        $obj->data_cadastro   = hoje();   
+        $obj->dta_cadastro    = hoje();   
         $obj->status          = "A";
     
        Flash::setForm($obj); 

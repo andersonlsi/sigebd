@@ -88,7 +88,7 @@
                     </div>
             </div>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary waves-effect waves-light">Salvar</button>
+                <button type="submit" class="btn btn-primary waves-effect waves-light" id="submit">Salvar</button>
             </div>
             </form>
         </div>

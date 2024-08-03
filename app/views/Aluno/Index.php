@@ -3,7 +3,8 @@
         <h4>Lista Geral de Alunos</h4>
     </div>
     <div>
-        <a href="<?php echo URL_BASE . "aluno/Create" ?>" class="btn btn-success" role="button" aria-pressed="true">
+        <a href="<?php echo URL_BASE . "aluno/Create" ?>" class="btn btn-primary w-md waves-effect waves-light"
+            role="button" aria-pressed="true">
             <i class="ion ion-md-add-circle-outline"></i>
             Novo
         </a>

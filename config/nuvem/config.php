@@ -2,7 +2,7 @@
 define("ROTA_MANUAL",false);
 
 define("SERVIDOR", "162.241.2.243");
-define("BANCO", "ande1305_sigebd");
+define("BANCO", "ande1305_sigebd_h");
 define("USUARIO", "ande1305_sigebd");
 define("SENHA", "204060Jolo@#");
 define("CHARSET","UTF8");
@@ -16,8 +16,8 @@ define('CAMINHO'            , realpath('./'));
 define("TITULO_SITE","SIGEBD - Gestão Escola Dominical");
 
 
-define('URL_BASE', 'https://' . $_SERVER["HTTP_HOST"].'/app/');
-define('URL_IMAGEM', "https://". $_SERVER['HTTP_HOST'] . "/app/assets/UP/");
+define('URL_BASE', 'https://' . $_SERVER["HTTP_HOST"].'/sigebd/');
+define('URL_IMAGEM', "https://". $_SERVER['HTTP_HOST'] . "/sigebd/assets/UP/");
 
 define("SESSION_LOGIN","usuario_logado");
 

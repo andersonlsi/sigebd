@@ -7,8 +7,7 @@ use app\models\service\Service;
 use app\util\UtilService;
 use stdClass;
 
-class FuncaoController extends Controller{  
-
+class FuncaoController extends Controller{
     private $usuario;
     
     public function __construct()
@@ -19,7 +18,7 @@ class FuncaoController extends Controller{
             $this->redirect(URL_BASE ."login");      
             exit;	  
          }    
-   }
+   }   
     
     public function index(){
         $dados["lista"] = Service::lista("funcao"); 

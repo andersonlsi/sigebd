@@ -17,12 +17,28 @@
     <!-- Icons Css -->
     <link href="<?php echo URL_BASE?>assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
-    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <link href="<?php echo URL_BASE?>assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <style>
+    /* Media query to hide the footer in mobile view */
+    @media (max-width: 576px) {
+        .mobile-hidden {
+            display: none;
+        }
+    }
+
+    /* Ensuring the login card is centered */
+    .account-pages {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    </style>
 
 </head>
 
 <body>
-    <div class="account-pages my-5 pt-sm-5">
+    <div class="account-pages">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-6 col-xl-5">
@@ -62,8 +78,8 @@
                                             </div>
                                         </div>
                                         <div class="col-6 text-end">
-                                            <button class="btn btn-primary w-md waves-effect waves-light"
-                                                type="submit">Entrar</button>
+                                            <button class="btn btn-primary w-md waves-effect waves-light" type="submit"
+                                                id="submit">Entrar</button>
                                         </div>
                                     </div>
                                     <div class="form-group mb-0 row">

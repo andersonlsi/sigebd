@@ -9,7 +9,6 @@ use app\util\UtilService;
 use stdClass;
 
 class ClasseController extends Controller {
-
     private $usuario;
     
     public function __construct()
@@ -20,7 +19,7 @@ class ClasseController extends Controller {
             $this->redirect(URL_BASE ."login");      
             exit;	  
          }    
-   }
+   } 
     
     public function index() {
         $dados["lista"] = Service::getRel(["classe", "faixa_etaria"], ["joinCampo" => "id_faixa_etaria"]);
@@ -44,12 +43,12 @@ class ClasseController extends Controller {
     }
 
     public function salvar() {            
-        $obj                  = new stdClass;
-        $obj->id_classe       = $_POST["id_classe"] ? $_POST["id_classe"] : null;
+        $obj = new stdClass;
+        $obj->id_classe = $_POST["id_classe"] ? $_POST["id_classe"] : null;
         $obj->id_faixa_etaria = $_POST["id_faixa_etaria"]; 
-        $obj->classe          = $_POST["classe"]; 
-        $obj->descricao       = $_POST["descricao"];  
-        $obj->status          = "A";        
+        $obj->classe = $_POST["classe"]; 
+        $obj->descricao = $_POST["descricao"];  
+        $obj->status = "A";        
         
         Flash::setForm($obj); 
         $resultado = ClasseService::salvar($obj, "id_classe", "classe");

@@ -25,6 +25,31 @@
     <link href="<?php echo URL_BASE?>assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="<?php echo URL_BASE?>assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <style>
+    .waves-light {
+        background-color: #2B3A4A !important;
+        /* Cor de fundo */
+        color: #fff !important;
+        /* Cor do texto */
+        border: none !important;
+        /* Remove a borda padrão */
+        /*padding: 10px 20px !important; */
+        /* Ajuste o padding conforme necessário */
+        border-radius: 4px !important;
+        /* Bordas arredondadas */
+        cursor: pointer !important;
+        /* Cursor de ponteiro ao passar sobre o botão */
+    }
+
+    .ti-arrow-left {
+        color: #2B3A4A !important;
+    }
+
+    .spacer {
+		height: 30px;
+		/* Ajuste o valor conforme necessário */
+	}
+    </style>
 
     <script>
     var base_url = "<?php echo URL_BASE ?>";

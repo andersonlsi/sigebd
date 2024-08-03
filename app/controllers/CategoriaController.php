@@ -7,8 +7,7 @@ use app\models\service\Service;
 use app\util\UtilService;
 use stdClass;
 
-class CategoriaController extends Controller{  
-
+class CategoriaController extends Controller{ 
     private $usuario;
     
     public function __construct()
@@ -19,7 +18,7 @@ class CategoriaController extends Controller{
             $this->redirect(URL_BASE ."login");      
             exit;	  
          }    
-   }
+   }  
     
     public function index(){
         $dados["lista"] = Service::lista("categoria"); 
@@ -44,7 +43,7 @@ class CategoriaController extends Controller{
         $obj = new stdClass;
         $obj->id_categoria = $_POST["id_categoria"] ? $_POST["id_categoria"] : null;
         $obj->categoria    = $_POST["categoria"];    
-        $obj->status       = "A";
+        $obj->status    = "A";
 
        //i($obj);
 
